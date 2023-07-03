@@ -1,0 +1,11 @@
+#python program to take binary input, reverse it and return decimal output
+
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        rev_num=0
+
+        for i in range(32):  #repeat 32 times of i/p integer starting from LSB
+            rev_num=(rev_num<<1)|(n&1) #for each iteration left shift the reversed number by 1 and add the last bit of the number to it by using and operation
+            n>>=1  #right shift given number by 1 to remove last bit
+
+        return rev_num
