@@ -1,6 +1,8 @@
+#python program.
+
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        hashmap=dict()
+        hashmap=dict()  #A dictionary named hashmap is created to serve as the hashmap to store encountered elements and their indices in the nums list.
 
         for i in range(len(nums)):
             if nums[i] in hashmap.keys():
